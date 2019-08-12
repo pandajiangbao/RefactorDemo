@@ -9,11 +9,22 @@ public class Rental {
         this.dayRented = dayRented;
     }
 
-    public Movie getMovie() {
+    Movie getMovie() {
         return movie;
     }
 
-    public int getDayRented() {
+    int getDayRented() {
         return dayRented;
+    }
+
+    double getThisAmount(MovieType movieType) {
+        return movieType.getAmount(getDayRented());
+    }
+
+    int getFrequentRenterPoints() {
+        if ((this.getMovie().getMovieType().getClass()==NewReleaseMovie.class) && getDayRented() > 1) {
+            return 2;
+        }
+        return 1;
     }
 }

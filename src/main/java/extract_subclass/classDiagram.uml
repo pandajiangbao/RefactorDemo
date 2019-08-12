@@ -3,11 +3,11 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="-460.0" y="-226.0">extract_subclass.JobItem</node>
+    <node x="0.0" y="0.0">extract_subclass.JobItem</node>
   </nodes>
   <notes />
   <edges />
-  <settings layout="Hierarchic Group" zoom="1.2000000000000002" x="5.954545454545496" y="-4.363636363636374" />
+  <settings layout="Hierarchic Group" zoom="1.0" x="478.0" y="514.5" />
   <SelectedNodes>
     <node>extract_subclass.JobItem</node>
   </SelectedNodes>

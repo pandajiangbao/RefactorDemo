@@ -7,21 +7,34 @@ public class Movie {
 
     private String title;
     private int priceCode;
+    private MovieType movieType;
 
     public Movie(String title, int priceCode) {
         this.title = title;
-        this.priceCode = priceCode;
+        if(priceCode==0){
+            this.setMovieType(new RegularMovie());
+        }else if(priceCode==1){
+            this.setMovieType(new NewReleaseMovie());
+        }else if(priceCode==2){
+            this.setMovieType(new ChildrenMovie());
+        }
+    }
+
+    public void setMovieType(MovieType movieType) {
+        this.movieType = movieType;
+    }
+
+    public MovieType getMovieType() {
+        return movieType;
     }
 
     public int getPriceCode() {
         return priceCode;
     }
 
-    public void setPriceCode(int priceCode) {
-        this.priceCode = priceCode;
-    }
 
     public String getTitle() {
         return title;
     }
+
 }
