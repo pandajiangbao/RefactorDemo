@@ -1,4 +1,5 @@
 package gildedRose;
+
 public class GildedRose {
     Item[] items;
 
@@ -45,19 +46,13 @@ public class GildedRose {
 
     private void updateItem(Item item) {
         if (item.quality < 50) {
-            item.quality = item.quality + 1;
-
-            if (item.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
+            item.quality++;
+            if (item.name.equals("Backstage passes to a TAFKAL80ETC concert") && item.quality < 50) {
                 if (item.sellIn < 11) {
-                    if (item.quality < 50) {
-                        item.quality = item.quality + 1;
-                    }
+                    item.quality++;
                 }
-
                 if (item.sellIn < 6) {
-                    if (item.quality < 50) {
-                        item.quality = item.quality + 1;
-                    }
+                    item.quality++;
                 }
             }
         }
